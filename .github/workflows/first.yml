@@ -20,15 +20,22 @@ jobs:
       - name: Step two
         run: "Get-Date"
   job3:
-    name: Third job
+    name: Third job checkout with params
     runs-on: macos-latest
     steps:
       - name: Step one
-        run: date
+        uses: actions/checkout@v2
+        with:
+          uses: apache/tomcat
+          ref: master
+          path: ./tomcat
+      - name: Print folder
+        run: |
+          cd tomcat
+          ls
   job4:
-    name: fourth job
+    name: fourth job market place action
     runs-on: ubuntu-latest
-    needs: [job1, job2, job3]
     steps:
       - name: Step one
         uses: actions/checkout@v2
