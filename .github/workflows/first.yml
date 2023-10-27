@@ -5,9 +5,6 @@ jobs:
 		runs-on: ubuntu-latest
 		steps:
 			- name: Step one
+			  run: echo "hello world"
 			- name: Step two
-	job2:
-		runs-on: windows-latest
-		steps:
-			- name: Step one
-			- name: Step two
+			  run: echo "hello world 2"
