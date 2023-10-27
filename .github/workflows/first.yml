@@ -1,5 +1,7 @@
 name: first
+
 on: push
+
 jobs:
   job1:
     name: First job
@@ -8,4 +10,4 @@ jobs:
     - name: Step one
       uses: actions/checkout@v2
     - name: Step two
-	  run: env | sort
+      run: pwd
