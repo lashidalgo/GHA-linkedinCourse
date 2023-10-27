@@ -3,8 +3,8 @@ on: push
 jobs:
   job1:
     runs-on: ubuntu-latest
-      steps:
-        - name: Step one
-          run: echo "hello world"
-        - name: Step two
-          run: echo "hello world 2"
+    steps:
+      - name: Step one
+        run: echo "hello world"
+      - name: Step two
+        run: echo "hello world 2"
